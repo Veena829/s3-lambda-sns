@@ -1,0 +1,6 @@
+bucket_1           = "image-non-sized-1"
+bucket_2           = "image-sized-1"
+sns_topic_arn      = "arn:aws:sns:ap-south-1:804937851364:image-resizing-topic"
+function_name      = "image-resizing-fn"
+lambda_zip_path    = "image-resizing-s3.zip"
+lambda_exec_role_arn = "arn:aws:iam::804937851364:role/lambda-execution-role"
