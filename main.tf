@@ -4,12 +4,12 @@ provider "aws" {
 
 module "s3_bucket_1" {
   source     = "./modules/s3_bucket"
-  bucket_name = "image-non-sized-1"
+  bucket_name = "image-non-sized-bucket-1"
 }
 
 module "s3_bucket_2" {
   source     = "./modules/s3_bucket"
-  bucket_name = "image-sized-1"
+  bucket_name = "image-sized-bucket-1"
 }
 
 module "sns_topic" {
