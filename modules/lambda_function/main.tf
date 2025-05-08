@@ -1,4 +1,4 @@
-ource "aws_lambda_function" "image_resizer" {
+resource "aws_lambda_function" "image_resizer" {
   function_name = var.function_name
   role          = var.lambda_exec_role_arn
   handler       = "image-resizing-s3.lambda_handler"
