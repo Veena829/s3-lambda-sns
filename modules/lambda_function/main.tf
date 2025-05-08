@@ -13,9 +13,8 @@ resource "aws_lambda_function" "image_resizer" {
   source_code_hash = filebase64sha256(var.lambda_zip_path)
   memory_size   = 256
   timeout       = 15
-  layers        = [aws_lambda_layer_version.pillow_layer.arn]
 
-   # 👇 Use prebuilt Pillow layer from Klayers
+  # 👇 Use prebuilt Pillow layer from Klayers
   layers = ["arn:aws:lambda:ap-south-1:770693421928:layer:Klayers-p39-pillow:1"]
 
   environment {
