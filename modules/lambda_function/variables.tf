@@ -8,12 +8,6 @@ variable "lambda_zip_path" {
   type        = string
 }
 
-variable "layer_zip_path" {
-  description = "Path to the Pillow Lambda layer ZIP file (if used)"
-  type        = string
-  default     = null
-}
-
 variable "lambda_exec_role_arn" {
   description = "IAM role ARN for Lambda to assume"
   type        = string
