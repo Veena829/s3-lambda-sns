@@ -1,10 +1,4 @@
-resource "aws_lambda_layer_version" "pillow_layer" {
-  filename          = var.layer_zip_path
-  layer_name        = "pillow-layer"
-  compatible_runtimes = ["python3.9"]
-}
-
-resource "aws_lambda_function" "image_resizer" {
+ource "aws_lambda_function" "image_resizer" {
   function_name = var.function_name
   role          = var.lambda_exec_role_arn
   handler       = "image-resizing-s3.lambda_handler"
