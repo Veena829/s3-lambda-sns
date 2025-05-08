@@ -28,7 +28,6 @@ module "lambda_function" {
   source               = "./modules/lambda_function"
   function_name        = "image-resizing-fn"
   lambda_zip_path      = "image-resizing-s3.zip"
-  layer_zip_path       = "pillow-layer.zip" # 👈 Right here
   lambda_exec_role_arn = module.iam_role.role_arn
   bucket_1             = module.s3_bucket_1.bucket_name
   bucket_2             = module.s3_bucket_2.bucket_name
